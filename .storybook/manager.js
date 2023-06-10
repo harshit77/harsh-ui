@@ -1,6 +1,6 @@
-import dizzionTheme from "./dizzionTheme";
+import harshTheme from "./harshTheme";
 import { addons } from "@storybook/addons";
 
 addons.setConfig({
-  theme: dizzionTheme,
+  theme: harshTheme,
 });

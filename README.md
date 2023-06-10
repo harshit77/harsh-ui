@@ -1,5 +1,9 @@
 **harsh-ui** is the library that drives internal project built by me.
 
+## Preview
+
+![img](screenshots/base.png)
+
 ## Installation
 
 ---

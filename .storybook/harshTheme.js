@@ -1,5 +1,4 @@
 import { create } from "@storybook/theming";
-import dizzionLogo from "./dizzion_logo.png";
 
 export default create({
   colorPrimary: "#0048fd",
@@ -26,8 +25,7 @@ export default create({
   inputTextColor: "#393939",
   inputBorderRadius: 4,
   base: "dark",
-  brandTitle: "Dizzion",
-  brandUrl: "http://Dizzion.com",
-  brandImage: dizzionLogo,
+  brandTitle: "harsh-ui",
+  brandUrl: "https://github.com/harshit77/harsh-ui",
   brandTarget: "_self",
 });
