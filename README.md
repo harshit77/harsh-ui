@@ -1,4 +1,4 @@
-**harsh-ui** is the library that drives C3Dizzion built at Dizzion.
+**harsh-ui** is the library that drives internal project built by me.
 
 ## Installation
 
@@ -84,4 +84,4 @@ return (
 
 ---
 
-harsh-ui gets auto-published to nexus on new commit to develop. You can checkout the publish workflow in git actions to get a live update.
+Will publish it on npm soon
