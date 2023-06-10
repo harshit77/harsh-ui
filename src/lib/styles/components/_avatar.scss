@@ -1,0 +1,37 @@
+.harsh-ui-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins-Semibold";
+  color: rgb(var(--harsh-ui-white));
+  border-radius: $harsh-ui-rounded-md;
+  padding: 5px 8px;
+
+  &__primary {
+    background-color: rgb(var(--harsh-ui-alert-info));
+  }
+
+  &__secondary {
+    background-color: rgb(var(--harsh-ui-complementary-purple));
+  }
+
+  &__rounded {
+    border-radius: $harsh-ui-rounded;
+  }
+
+  &__size--small {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+  &__size--medium {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+  &__size--large {
+    font-size: 24px;
+    width: 70px;
+    height: 70px;
+  }
+}

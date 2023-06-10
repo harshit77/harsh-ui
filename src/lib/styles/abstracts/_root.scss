@@ -1,0 +1,29 @@
+:root {
+  //Colors
+  @each $color, $value in $harsh-ui-theme-colors {
+    --harsh-ui-#{$color}: #{$value};
+  }
+
+  // Font sizes
+  @each $size, $value in $harsh-ui-font-sizes {
+    --harsh-ui-text-#{$size}: #{$value};
+  }
+
+  // Font family
+  @each $family, $value in $harsh-ui-font-family {
+    --harsh-ui-font-#{$family}: #{$value};
+  }
+
+  // Line height
+  @each $lh, $value in $harsh-ui-line-heights {
+    --harsh-ui-leading-#{$lh}: #{$value};
+  }
+
+  // Text transform
+  @each $tt, $value in $harsh-ui-text-transform {
+    --harsh-ui-text-transform-#{$tt}: #{$value};
+  }
+
+  //Toastr
+  --toastify-color-light: rgb(var($harsh-ui-alert-success));
+}

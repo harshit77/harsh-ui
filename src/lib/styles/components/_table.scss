@@ -1,0 +1,206 @@
+.harsh-ui-table__outerContainer {
+  position: relative;
+  display: grid;
+  & .harsh-ui-table__spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.harsh-ui-table__container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: $harsh-ui-rounded-lg;
+  border: 1px solid rgb(var(--harsh-ui-border-80));
+  color: rgb(var(--harsh-ui-white));
+  margin: -1px;
+  &--loading {
+    justify-content: center;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  &.no-border {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.harsh-ui-table__wrapper {
+  text-align: left;
+  background: transparent;
+  font-family: "Poppins-regular";
+  overflow-x: auto;
+  @include scrollbar();
+}
+
+.harsh-ui-table {
+  min-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  @include scrollbar();
+  & thead {
+    tr {
+      background-color: rgb(var(--harsh-ui-surface-bg-90));
+      th {
+        color: rgb(var(--harsh-ui-dark-30));
+        font-weight: 400;
+        padding: 22px 20px;
+        font-size: 14px;
+        max-width: 0;
+        & span {
+          display: flex;
+          gap: 4px;
+          align-items: center;
+        }
+      }
+    }
+  }
+  & tbody {
+    & tr {
+      border-bottom: 1px solid rgb(var(--harsh-ui-border-80));
+      &:nth-child(even) {
+        background: rgb(var(--harsh-ui-dark-90));
+      }
+      &.harsh-ui-row-success {
+        background-color: rgba(var(--harsh-ui-alert-success), 0.24);
+      }
+      &.harsh-ui-row-error {
+        background-color: rgba(var(--harsh-ui-alert-error), 0.24);
+      }
+      & td {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgb(var(--harsh-ui-dark-10));
+        padding: 16px 20px;
+        max-width: 0;
+        &.harsh-ui-ellipsis--noPadding {
+          padding: 0;
+        }
+        & > * {
+          display: initial;
+        }
+      }
+    }
+  }
+  &__secondary {
+    & thead {
+      tr {
+        background-color: rgb(var(--harsh-ui-dark-80));
+      }
+    }
+    & tbody {
+      & tr {
+        &:nth-child(even) {
+          background: none;
+        }
+      }
+    }
+  }
+  &__bordered {
+    & thead {
+      tr {
+        background-color: transparent;
+        border-bottom: 1px solid rgb(var(--harsh-ui-border-80));
+        & th:not(:last-child) {
+          border-right: 1px solid rgb(var(--harsh-ui-border-80));
+        }
+      }
+    }
+    & tbody {
+      & tr {
+        &:nth-child(even) {
+          background: none;
+        }
+        & td:not(:last-child) {
+          border-right: 1px solid rgb(var(--harsh-ui-border-80));
+        }
+      }
+    }
+  }
+
+  &--thead {
+    th {
+      position: relative;
+      .resizer {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        background-color: rgb(var(--harsh-ui-dark-70));
+        width: 5px;
+        right: -2px;
+        cursor: col-resize;
+        user-select: none;
+      }
+    }
+  }
+
+  &__sorting {
+    color: rgb(var(--harsh-ui-dark-10));
+  }
+  &__clickable {
+    cursor: pointer;
+  }
+  &__nested {
+    border-spacing: 0 16px;
+    border-collapse: separate;
+    width: 100%;
+    &--thead {
+      th {
+        background-color: rgb(var(--harsh-ui-dark-80));
+      }
+    }
+    table {
+      border-collapse: collapse;
+      background-color: rgb(var(--harsh-ui-surface-bg-90));
+      color: rgb(var(--harsh-ui-dark-10));
+      thead {
+        th {
+          padding: 12px 24px;
+        }
+      }
+      > tr:first-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.harsh-ui-pagination__wrapper {
+  display: flex;
+  padding: 10px 20px;
+  font-family: "Poppins-medium";
+  font-size: 12px;
+  color: rgb(var(--harsh-ui-dark-30));
+  align-items: center;
+  justify-content: space-between;
+  border-radius: $harsh-ui-rounded-lg;
+  & .harsh-ui-pagination__title {
+    & span {
+      color: rgb(var(--harsh-ui-dark-10));
+    }
+  }
+  & .harsh-ui-pagination__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    & svg {
+      cursor: pointer;
+    }
+    &--disabled {
+      color: rgb(var(--harsh-ui-dark-70));
+      cursor: not-allowed;
+    }
+  }
+}
+.harsh-ui-table {
+  display: inline-table !important;
+}
+
+.harsh-ui-last-column {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}

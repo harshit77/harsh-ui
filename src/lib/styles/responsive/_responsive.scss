@@ -1,0 +1,70 @@
+@media (max-width: 639px) {
+  .truncate {
+    width: 100%;
+    white-space: normal;
+    word-break: break-all;
+  }
+  .harsh-ui-filter__wrapper {
+    .harsh-ui-filter__header,
+    .harsh-ui-filter__actions,
+    .harsh-ui-filter__actions--dropdown,
+    .harsh-ui-input__wrapper--horizontal,
+    .harsh-ui-dropdown--wrapper--horizontal,
+    .harsh-ui-dropdown--wrapper,
+    .harsh-ui-filter__field {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  .harsh-ui-inlineFilter--container {
+    .harsh-ui-inlineFilter {
+      .harsh-ui-inlineFilter--selector:first-child,
+      .harsh-ui-inlineFilter--operator,
+      .harsh-ui-inlineFilter--clearOperator {
+        border: 0;
+      }
+      flex-direction: column;
+      width: 100%;
+    }
+    .harsh-ui-inlineFilter--selector {
+      .harsh-ui-dropdown--wrapper {
+        .harsh-ui-button {
+          min-width: 100% !important;
+        }
+      }
+    }
+  }
+  body .harsh-ui-text-h2 {
+    font-size: 18px !important;
+  }
+  .harsh-ui-button__size--large {
+    font-size: 16px !important;
+  }
+  .harsh-ui-button {
+    &__size--large {
+      font-size: 14px !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .accorion-content {
+    .harsh-ui-detail__wrapper {
+      grid-template-columns: repeat(1, minmax(0px, 1fr)) !important;
+    }
+  }
+  .harsh-ui-stepper__wrapper {
+    margin-top: 8px;
+    gap: 20px !important;
+    .harsh-ui-stepper__step {
+      &--active {
+        &:before {
+          bottom: -8px !important;
+        }
+      }
+    }
+
+    &--withIcon {
+      gap: 0px !important;
+    }
+  }
+}

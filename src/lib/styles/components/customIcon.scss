@@ -1,0 +1,36 @@
+.harsh-ui-customIcon {
+  cursor: pointer;
+  fill: rgb(var(--harsh-ui-dark-100));
+  filter: drop-shadow(0 0px 5px rgba(var(--harsh-ui-primary), 0.7));
+
+  & g {
+    stroke: none;
+    color: rgb(var(--harsh-ui-primary));
+  }
+
+  &__square {
+    stroke: rgb(var(--harsh-ui-primary));
+    filter: none;
+  }
+
+  &__secondary {
+    stroke: 2px solid rgb(var(--harsh-ui-secondary-tint-50));
+    color: rgb(var(--harsh-ui-secondary-tint-50));
+    filter: drop-shadow(0 0px 5px rgba(var(--harsh-ui-secondary-tint-50), 0.7));
+    & g {
+      stroke: none;
+      color: rgb(var(--harsh-ui-secondary-tint-50));
+    }
+  }
+
+  &__dark {
+    stroke: rgb(var(--harsh-ui-dark-40));
+    color: rgb(var(--harsh-ui-dark-40));
+    fill: rgb(var(--harsh-ui-dark-80));
+    filter: none;
+    & g {
+      stroke: none;
+      color: rgb(var(--harsh-ui-dark-10));
+    }
+  }
+}

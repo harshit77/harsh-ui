@@ -1,0 +1,206 @@
+.harsh-ui-upload__container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.harsh-ui-upload__container--col {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pg-viewer-wrapper {
+  overflow: hidden !important;
+  .pdf-canvas {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.harsh-ui-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  user-select: none;
+  cursor: pointer;
+
+  &__selectFiles,
+  &__preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    border-radius: $harsh-ui-rounded;
+    text-decoration: underline;
+    min-height: 71px;
+    font-family: "Poppins-Medium";
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(var(--harsh-ui-dark-10));
+    background-color: rgb(var(--harsh-ui-secondary-shade-10));
+    border: 1px dashed rgb(var(--harsh-ui-secondary-tint-50));
+    & input {
+      display: none;
+    }
+    &--icons {
+      svg {
+        color: rgb(var(--harsh-ui-secondary-tint-50));
+      }
+    }
+
+    &--lists {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      &--list {
+        padding: 8px;
+        border-radius: $harsh-ui-rounded;
+        background: rgb(var(--harsh-ui-surface-bg-80));
+        border: 1px dashed rgb(var(--harsh-ui-border-60));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+
+        .list--title {
+          display: flex;
+          gap: 4px;
+          align-items: center;
+          margin-right: 20px;
+
+          &--ellipsis {
+            text-overflow: ellipsis;
+            width: 130px;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+        }
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__preview {
+    flex-direction: column;
+    padding: 46px 28px;
+    width: 400px;
+    height: 200px;
+    text-decoration: none;
+
+    &List {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 16px;
+      width: 400px;
+      height: 200px;
+      border-radius: $harsh-ui-rounded;
+      background-color: rgb(var(--harsh-ui-surface-bg-80));
+      &--top {
+        background-color: rgb(var(--harsh-ui-surface-bg-70));
+        padding: 30px 40px 10px 40px;
+        border-radius: $harsh-ui-rounded;
+        flex: 1;
+        cursor: pointer;
+        max-height: 138px;
+        .pg-viewer-wrapper {
+          .pdf-canvas {
+            display: block;
+          }
+        }
+      }
+      &--bottom {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        align-items: center;
+        margin: 8px 0;
+        svg {
+          color: rgb(var(--harsh-ui-alert-error));
+          margin-right: -6px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &--dragTitle {
+      display: flex;
+      gap: 5px;
+    }
+
+    &--innerTitle {
+      text-decoration: underline;
+      color: rgb(var(--harsh-ui-secondary-tint-50));
+    }
+  }
+
+  &__previewSide {
+    width: 100%;
+    height: 280px;
+    justify-content: center;
+
+    &--dragTitle {
+      display: flex;
+      gap: 5px;
+    }
+
+    &--innerTitle {
+      text-decoration: underline;
+      color: rgb(var(--harsh-ui-secondary-tint-50));
+    }
+  }
+
+  &__disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.harsh-ui-upload__progress {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 34px;
+  background-color: rgb(var(--harsh-ui-surface-bg-90));
+  border-color: 1px solid rgb(var(--harsh-ui-border-70));
+  border-radius: $harsh-ui-rounded-md;
+  color: rgb(var(--harsh-ui-dark-10));
+  .harsh-ui-indicator__wrapper {
+    width: 100%;
+    &--label {
+      color: rgb(var(--harsh-ui-dark-10));
+      .harsh-ui-text-body3 {
+        font-size: 18px;
+      }
+    }
+    .harsh-ui-indicator__progressValue {
+      display: none;
+    }
+  }
+  &--done {
+    .harsh-ui-indicator__wrapper--label {
+      margin: 0;
+    }
+    .harsh-ui-indicator__linear--container {
+      display: none;
+    }
+  }
+}
+
+.no-preview-list {
+  .harsh-ui-upload {
+    &__preview {
+      width: 100%;
+      padding-top: 0;
+      height: auto;
+      padding-bottom: 10px;
+    }
+    &__previewList {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.harsh-ui-datepicker_wrapper {
+  display: flex;
+  z-index: 999;
+}
+
+.harsh-ui-seprator_wrapper {
+  min-width: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .harsh-ui-arrowleft {
+    position: absolute;
+    left: 0;
+    margin-top: 1.6rem;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 10px solid rgb(var(--harsh-ui-border-70));
+  }
+
+  .harsh-ui-seprator {
+    height: 1px;
+    background-color: rgb(var(--harsh-ui-border-70));
+    width: 100%;
+    margin-top: 1.6rem;
+  }
+
+  .harsh-ui-arrowright {
+    position: absolute;
+    right: 0;
+    margin-top: 1.6rem;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 10px solid rgb(var(--harsh-ui-border-70));
+  }
+}
+.harsh-ui-datetime_dropdown {
+  min-width: 200px;
+}
+
+.harsh-ui-datetime_wrapper {
+  display: flex;
+}

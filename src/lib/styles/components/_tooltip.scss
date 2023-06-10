@@ -1,0 +1,104 @@
+// tippy core
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+  opacity: 0;
+}
+
+.tippy-box {
+  position: relative;
+  background-color: rgb(var(--harsh-ui-surface-bg-100));
+  font-family: "Poppins-Medium";
+  color: rgb(var(--harsh-ui-dark-10));
+  border-radius: $harsh-ui-rounded;
+  border: 1px solid rgb(var(--harsh-ui-border-70));
+  font-size: var(--harsh-ui-text-xs);
+  line-height: 1.4;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+}
+.tippy-content {
+  position: relative;
+  padding: 4px 8px;
+  z-index: 1;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow {
+  bottom: 0;
+}
+.tippy-box[data-placement^="top"] > .tippy-arrow:before,
+.tippy-box[data-placement^="top"] > .tippy-arrow:after {
+  top: 16px;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  transform-origin: center top;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow::after {
+  top: 15px;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow {
+  top: 0;
+}
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:before,
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:after {
+  top: -8.1px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: initial;
+  transform-origin: center bottom;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:after {
+  top: -8px;
+  left: 0.65px;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow {
+  right: 0;
+}
+.tippy-box[data-placement^="left"] > .tippy-arrow:before,
+.tippy-box[data-placement^="left"] > .tippy-arrow:after {
+  border-width: 8px 0 8px 8px;
+  border-left-color: initial;
+  right: -8px;
+  transform-origin: center left;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow:after {
+  right: -7px;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow {
+  left: 0;
+}
+.tippy-box[data-placement^="right"] > .tippy-arrow:before,
+.tippy-box[data-placement^="right"] > .tippy-arrow:after {
+  left: -8.5px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: initial;
+  transform-origin: center right;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow:after {
+  left: -7.5px;
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: rgb(var(--harsh-ui-surface-bg-100));
+}
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+  color: rgb(var(--harsh-ui-border-70));
+}
+.tippy-arrow:after {
+  content: "";
+  top: 0;
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+}

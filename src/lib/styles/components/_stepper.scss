@@ -1,0 +1,210 @@
+.harsh-ui-stepper__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 68px;
+  margin: auto;
+  color: rgb(var(--harsh-ui-dark-10));
+
+  &--sequential {
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+    padding: 15px;
+    padding-right: 0;
+  }
+
+  &--withIcon {
+    gap: 0px;
+    overflow-y: visible;
+    overflow-x: auto;
+    @include scrollbar();
+  }
+
+  & .harsh-ui-stepper__step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: not-allowed;
+
+    &--alternativeLabel {
+      flex-direction: column;
+    }
+
+    &--sequential {
+      flex-direction: row;
+    }
+
+    &--separator {
+      top: 32px;
+      left: 16px;
+      position: absolute;
+      border-left: 1px solid rgb(var(--harsh-ui-dark-50));
+      height: 32px;
+    }
+
+    &--allowClick {
+      cursor: pointer;
+    }
+
+    &:last-child {
+      .harsh-ui-stepper__step--separator {
+        display: none;
+      }
+    }
+
+    &--tagBased {
+      flex-direction: row;
+      padding: 1rem 2rem;
+      min-width: 250px;
+      display: flex;
+      gap: 1rem;
+      flex: 1;
+      background-color: rgb(var(--harsh-ui-dark-90));
+      margin-right: -8px;
+      -webkit-clip-path: polygon(
+        30px 50%,
+        0% 0%,
+        calc(100% - 30px) 0%,
+        100% 50%,
+        calc(100% - 30px) 100%,
+        0% 100%
+      );
+
+      &:first-child {
+        -webkit-clip-path: polygon(
+          0% 0%,
+          calc(100% - 30px) 0%,
+          100% 50%,
+          calc(100% - 30px) 100%,
+          0% 100%
+        );
+      }
+
+      &:last-child {
+        -webkit-clip-path: polygon(
+          30px 50%,
+          0% 0%,
+          100% 0%,
+          100% 100%,
+          0% 100%
+        );
+        margin-right: 1px;
+      }
+
+      &--active {
+        background-color: rgba(var(--harsh-ui-alert-info), 0.1);
+      }
+
+      &--completed {
+        background-color: rgba(var(--harsh-ui-alert-success), 0.1);
+      }
+    }
+
+    &--active {
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        bottom: -25px;
+        border-radius: $harsh-ui-rounded-lg;
+        border-bottom: 2px solid rgb(var(--harsh-ui-alert-info));
+      }
+
+      &--tagBased {
+        &:before {
+          display: none;
+        }
+      }
+
+      &--sequential {
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    &--allowClick {
+      cursor: pointer;
+    }
+
+    & .harsh-ui-stepper__iconContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: $harsh-ui-rounded-full;
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgb(var(--harsh-ui-dark-50));
+      background-color: rgb(var(--harsh-ui-dark-90));
+      color: rgb(var(--harsh-ui-dark-50));
+      font-family: "Poppins-Regular";
+      font-size: var(--harsh-ui-text-base);
+      z-index: 10;
+      align-self: center;
+
+      &--completed {
+        background-color: rgba(var(--harsh-ui-alert-success), 0.1);
+        color: rgb(var(--harsh-ui-alert-success));
+        border: 1px solid rgb(var(--harsh-ui-alert-success));
+      }
+
+      &--error {
+        background-color: rgba(var(--harsh-ui-alert-error), 0.1);
+        color: rgb(var(--harsh-ui-alert-error));
+        border: 1px solid rgb(var(--harsh-ui-alert-error));
+      }
+
+      &--withIcon {
+        background-color: transparent;
+        color: rgb(var(--harsh-ui-dark-50));
+        border: 0;
+
+        &--activeStep {
+          background-color: transparent;
+          color: rgb(var(--harsh-ui-alert-info));
+          border: 1px solid rgb(var(--harsh-ui-alert-info));
+          border: 0;
+        }
+
+        &--completed {
+          background-color: transparent;
+          color: rgb(var(--harsh-ui-alert-success));
+          border: 0;
+        }
+      }
+    }
+
+    & .harsh-ui-stepper__checkedIcon {
+      position: absolute;
+      right: 50px;
+      color: rgb(var(--harsh-ui-alert-success));
+    }
+  }
+}
+
+.harsh-ui-stepper__label {
+  color: rgb(var(--harsh-ui-dark-50));
+  cursor: pointer;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &--disabled {
+    color: rgb(var(--harsh-ui-dark-50));
+    cursor: not-allowed;
+  }
+
+  &--activeStep {
+    color: rgb(var(--harsh-ui-dark-10));
+  }
+
+  &--completed {
+    color: rgb(var(--harsh-ui-dark-10));
+  }
+}
+
+.harsh-ui-stepper--subtitle {
+  padding: 10px 0;
+}

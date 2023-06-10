@@ -1,0 +1,71 @@
+.harsh-ui-counter__primary {
+  display: flex;
+  align-items: center;
+  background-color: rgb(var(--harsh-ui-surface-bg-100));
+  border: 1px solid rgb(var(--harsh-ui-border-70));
+  width: 126px;
+  font-family: "Poppins-Medium";
+  border-radius: $harsh-ui-rounded;
+  @include inputTypeNumber();
+  & button {
+    padding: 11px 8px;
+    cursor: pointer;
+    &:disabled {
+      color: rgb(var(--harsh-ui-dark-70));
+    }
+  }
+  & input {
+    width: 100%;
+    background-color: transparent;
+    padding: 0 4px;
+    text-align: center;
+    border: none;
+    color: rgb(var(--harsh-ui-dark-10));
+    font-size: 16px;
+    line-height: 24px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--small {
+    width: 66px;
+    button {
+      padding: 3px 0;
+    }
+    input {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &--medium {
+    width: 110px;
+  }
+  &--disabled {
+    color: rgb(var(--harsh-ui-dark-70));
+    background-color: rgb(var(--harsh-ui-dark-80));
+    & input {
+      color: rgb(var(--harsh-ui-dark-70));
+    }
+  }
+}
+
+.harsh-ui-counter__secondary {
+  @include inputTypeNumber();
+  .harsh-ui-input__suffix {
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent !important;
+    & button:nth-of-type(1) {
+      margin-top: 2px;
+    }
+    & button:nth-of-type(2) {
+      margin-top: -4px;
+    }
+  }
+  & .harsh-ui-input--disabled {
+    .harsh-ui-input__suffix {
+      background-color: rgb(var(--harsh-ui-dark-80)) !important;
+    }
+  }
+}

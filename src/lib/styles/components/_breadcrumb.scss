@@ -1,0 +1,32 @@
+.harsh-ui-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  line-height: 18px;
+  font-size: var(--harsh-ui-text-body3);
+  &--item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: rgb(var(--harsh-ui-dark-40));
+  }
+  &--active {
+    font-family: "Poppins-Medium";
+    text-decoration: none;
+    color: rgb(var(--harsh-ui-dark-10));
+    & div {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.harsh-ui-breadcrumb--separator {
+  color: rgb(var(--harsh-ui-dark-50));
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

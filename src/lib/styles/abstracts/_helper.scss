@@ -1,0 +1,40 @@
+body {
+  // font sizes
+  @each $size, $value in $harsh-ui-font-sizes {
+    .harsh-ui-text-#{$size} {
+      font-size: var(--harsh-ui-text-#{$size});
+    }
+  }
+
+  // font weights
+  @each $family, $value in $harsh-ui-font-family {
+    .harsh-ui-font-#{$family} {
+      font-family: var(--harsh-ui-font-#{$family});
+    }
+  }
+
+  // line height
+  @each $lh, $value in $harsh-ui-line-heights {
+    .harsh-ui-leading-#{$lh} {
+      line-height: var(--harsh-ui-leading-#{$lh});
+    }
+  }
+
+  // text transform
+  @each $tt, $value in $harsh-ui-text-transform {
+    .harsh-ui-text-transform-#{$tt} {
+      text-transform: var(--harsh-ui-text-transform-#{$tt});
+    }
+  }
+}
+
+.harsh-ui-scrollbar {
+  @include scrollbar();
+}
+
+.harsh-ui-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  overflow: hidden;
+}

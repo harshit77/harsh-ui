@@ -1,0 +1,30 @@
+.harsh-ui-toggleButtonGroup {
+  display: flex;
+  align-items: center;
+  color: rgb(var(--harsh-ui-dark-30));
+  font-family: "Poppins-Regular";
+  font-size: 14px;
+  line-height: 20px;
+  gap: 12px;
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(var(--harsh-ui-surface-bg-90));
+    padding: 8px;
+    border-radius: $harsh-ui-rounded;
+
+    &--button {
+      padding: 5px 11px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      &--active {
+        background-color: rgb(var(--harsh-ui-secondary-shade-10));
+        color: rgb(var(--harsh-ui-secondary-tint-50));
+        border: 1px solid rgb(var(--harsh-ui-secondary-tint-50));
+        border-radius: $harsh-ui-rounded;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.harsh-ui-card {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 26px;
+  background-color: rgb(var(--harsh-ui-surface-bg-90));
+  border: 1px solid rgb(var(--harsh-ui-border-70));
+  color: rgb(var(--harsh-ui-dark-30));
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: $harsh-ui-rounded;
+  cursor: pointer;
+
+  &__secondaryTitle {
+    display: flex;
+    gap: 19px;
+    font-family: "Poppins-Medium";
+    color: rgb(var(--harsh-ui-dark-10));
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 18px;
+  }
+
+  &__primaryTitle {
+    display: flex;
+    gap: 19px;
+    font-family: "Poppins-Regular";
+    color: rgb(var(--harsh-ui-dark-10));
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__radio {
+    padding: 16px 12px;
+    background: transparent;
+    &--title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Poppins-Medium";
+      font-size: 16px;
+      line-height: 24px;
+      pointer-events: none;
+      gap: 46px;
+      &--caption {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        .harsh-ui-avatar__primary {
+          background: rgb(var(--harsh-ui-surface-bg-80));
+        }
+      }
+      .harsh-ui-radio__wrapper {
+        .harsh-ui-radio__container {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__media {
+    align-items: center;
+    width: 244px;
+    font-family: "Poppins-Medium";
+    font-size: 20px;
+    line-height: 30px;
+    padding: 22px 0;
+    &--icon {
+      svg {
+        width: 80px;
+        height: 76px;
+      }
+      margin-bottom: 16px;
+    }
+  }
+
+  &__selected {
+    background-color: rgb(var(--harsh-ui-secondary-shade-10));
+    border: 1px solid rgb(var(--harsh-ui-secondary-tint-50));
+    & .harsh-ui-card____primaryTitle--icon,
+    .harsh-ui-card____secondaryTitle--icon {
+      color: rgb(var(--harsh-ui-secondary-tint-50));
+    }
+  }
+
+  &__disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &__size--xsmall {
+    padding: 16px;
+  }
+
+  &__size--small {
+    padding: 18px 32px 22px 16px;
+  }
+
+  &__size--medium {
+    padding: 26px 20px 37px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

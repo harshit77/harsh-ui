@@ -1,0 +1,31 @@
+.harsh-ui-charts-tooltip {
+  padding: 6px 12px;
+  background-color: rgb(var(--harsh-ui-surface-bg-90));
+  border: 1px solid rgb(var(--harsh-ui-border-70));
+  color: rgb(var(--harsh-ui-dark-30));
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: $harsh-ui-rounded;
+  margin-left: -100px;
+}
+
+.harsh-ui-charts-tooltip:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-left: -40px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid rgb(var(--harsh-ui-surface-bg-90));
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.harsh-ui-charts-tooltip p div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}

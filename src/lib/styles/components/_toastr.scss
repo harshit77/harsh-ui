@@ -1,0 +1,96 @@
+body {
+  .Toastify__toast-container {
+    width: auto;
+    max-width: 720px;
+    min-width: 530px;
+
+    .Toastify__toast.Toastify__toast--info {
+      background-color: rgba(var(--harsh-ui-alert-info), 0.5);
+      & .Toastify__toast-body {
+        color: rgb(var(--harsh-ui-alert-info));
+        & .harsh-ui-toastr__message--title,
+        & .Toastify__toast-icon {
+          color: rgb(var(--harsh-ui-alert-info));
+        }
+      }
+    }
+
+    .Toastify__toast.Toastify__toast--error {
+      background-color: rgb(var(--harsh-ui-alert-error-100));
+      & .Toastify__toast-body {
+        color: rgb(var(--harsh-ui-alert-error));
+        & .harsh-ui-toastr__message--title,
+        & .Toastify__toast-icon {
+          color: rgb(var(--harsh-ui-alert-error));
+        }
+      }
+    }
+
+    .Toastify__toast.Toastify__toast--success {
+      background-color: rgb(var(--harsh-ui-alert-success-100));
+      & .Toastify__toast-body {
+        color: rgb(var(--harsh-ui-alert-success));
+      }
+      & .harsh-ui-toastr__message--title,
+      & .Toastify__toast-icon {
+        color: rgb(var(--harsh-ui-alert-success));
+      }
+    }
+
+    .Toastify__toast.Toastify__toast--warning {
+      background-color: rgba(var(--harsh-ui-alert-warning), 0.5);
+      & .Toastify__toast-body {
+        color: rgb(var(--harsh-ui-alert-warning));
+        & .harsh-ui-toastr__message--title,
+        & .Toastify__toast-icon {
+          color: rgb(var(--harsh-ui-alert-warning));
+        }
+      }
+    }
+
+    .Toastify__toast {
+      .Toastify__toast-icon {
+        margin: 0;
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .Toastify__toast-body {
+        display: flex;
+        align-items: flex-start;
+        padding: 14px;
+        gap: 22px;
+        & .harsh-ui-toastr__wrapper {
+          display: flex;
+          justify-content: space-between;
+          color: rgb(var(--harsh-ui-dark-10));
+          & .harsh-ui-toastr__message {
+            display: flex;
+            flex-direction: column;
+            font-family: "Poppins-Medium";
+            font-weight: var(--harsh-ui-font-medium);
+            font-size: var(--harsh-ui-text-sm);
+            line-height: 20px;
+            gap: 16px;
+          }
+        }
+      }
+
+      .harsh-ui-toastr__close-button {
+        opacity: 0.8;
+        margin: auto 0 auto 8px;
+        flex-shrink: 0;
+        color: rgb(var(--harsh-ui-white));
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

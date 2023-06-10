@@ -1,0 +1,79 @@
+.anchor-tag-disable {
+  color: rgb(var(--harsh-ui-border-70));
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+.card-border,
+.active-card-border {
+  background-image: repeating-linear-gradient(
+      -43deg,
+      #525252,
+      #525252 3px,
+      transparent 3px,
+      transparent 6px,
+      #525252 6px
+    ),
+    repeating-linear-gradient(
+      47deg,
+      #525252,
+      #525252 3px,
+      transparent 3px,
+      transparent 6px,
+      #525252 6px
+    ),
+    repeating-linear-gradient(
+      137deg,
+      #525252,
+      #525252 3px,
+      transparent 3px,
+      transparent 6px,
+      #525252 6px
+    ),
+    repeating-linear-gradient(
+      227deg,
+      #525252,
+      #525252 3px,
+      transparent 3px,
+      transparent 6px,
+      #525252 6px
+    );
+  background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
+.active-card-border {
+  background-image: repeating-linear-gradient(
+      -48deg,
+      #8cbbf9,
+      #8cbbf9 4px,
+      transparent 4px,
+      transparent 8px,
+      #8cbbf9 8px
+    ),
+    repeating-linear-gradient(
+      42deg,
+      #8cbbf9,
+      #8cbbf9 4px,
+      transparent 4px,
+      transparent 8px,
+      #8cbbf9 8px
+    ),
+    repeating-linear-gradient(
+      132deg,
+      #8cbbf9,
+      #8cbbf9 4px,
+      transparent 4px,
+      transparent 8px,
+      #8cbbf9 8px
+    ),
+    repeating-linear-gradient(
+      222deg,
+      #8cbbf9,
+      #8cbbf9 4px,
+      transparent 4px,
+      transparent 8px,
+      #8cbbf9 8px
+    );
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+}

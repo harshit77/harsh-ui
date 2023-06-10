@@ -1,0 +1,13 @@
+.harsh-ui-noRecordFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(var(--harsh-ui-dark-10));
+  & h2 {
+    margin-top: 16px;
+  }
+  & h3-1 {
+    margin: 24px 0;
+  }
+}

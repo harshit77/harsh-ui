@@ -1,0 +1,30 @@
+@mixin scrollbar(
+  $size: 8px,
+  $foreground-color: rgb(var(--harsh-ui-border-60)),
+  $background-color: rgb(var(--harsh-ui-border-70))
+) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+    border-radius: 50px;
+  }
+}
+
+@mixin inputTypeNumber() {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+}

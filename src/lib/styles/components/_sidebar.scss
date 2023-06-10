@@ -1,0 +1,187 @@
+.harsh-ui-sidebar {
+  position: relative;
+  display: flex;
+  opacity: 1;
+  flex-shrink: 0;
+  flex-basis: $sidebar-width-collapsed;
+  transition-property: flex-basis, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  background: rgb(var(--harsh-ui-surface-bg-100));
+
+  flex-direction: column;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+
+  &__toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 70px;
+    left: $sidebar-width-collapsed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: $harsh-ui-rounded-full;
+    border: 1px solid rgb(var(--harsh-ui-border-80));
+    background-color: rgb(var(--harsh-ui-dark-90));
+    color: rgb(var(--harsh-ui-dark-10));
+    transform: translate(-50%, -50%);
+    &--open {
+      left: $sidebar-width-open;
+    }
+  }
+
+  & .harsh-ui-sidebar__nav {
+    width: $sidebar-width-collapsed;
+    position: fixed;
+    border-right: 1px solid rgb(var(--harsh-ui-border-80));
+    height: 100vh;
+    overflow: hidden;
+    &--open {
+      width: $sidebar-width-open;
+    }
+    .harsh-ui-sidebar__menu {
+      display: flex;
+      flex-direction: column;
+      color: rgb(var(--harsh-ui-dark-40));
+      height: calc(100vh - 140px);
+      overflow-x: hidden;
+      overflow-y: hidden;
+      @include scrollbar();
+      &:hover {
+        overflow-y: auto;
+      }
+      > li {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        cursor: pointer;
+        margin: 4px 6px;
+
+        &:first-child {
+          align-items: start;
+          margin-top: 8px;
+        }
+
+        &:nth-child(2) {
+          margin: 32px 6px 4px 6px;
+        }
+
+        & .harsh-ui-listContainer {
+          display: inline-flex;
+          align-items: center;
+          width: 100%;
+          padding: 8px;
+          border-radius: $harsh-ui-rounded;
+
+          &:hover {
+            background-color: rgb(var(--harsh-ui-dark-90));
+          }
+
+          &--active {
+            background-color: rgb(var(--harsh-ui-dark-90));
+            color: rgb(var(--harsh-ui-dark-10));
+          }
+
+          & .harsh-ui-listContainer__icon {
+            font-size: 18px;
+          }
+
+          & .harsh-ui-listContainer__text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+          }
+
+          & span:first-child {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  &__open {
+    flex-basis: $sidebar-width-open;
+    .harsh-ui-sidebar__menu {
+      height: calc(100vh - 72px) !important;
+    }
+  }
+
+  & .harsh-ui-sidebar__theme {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0;
+    //background-color: rgb(var(--harsh-ui-surface-bg-100));
+
+    &--container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      cursor: pointer;
+      margin: 4px 5px;
+      padding: 8px 4px;
+      border-radius: 20px;
+      color: rgb(var(--harsh-ui-dark-30));
+      background-color: rgb(var(--harsh-ui-surface-bg-90));
+      > div {
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        padding: 8px 6px;
+        &.active {
+          border-radius: 20px;
+          color: rgb(var(--harsh-ui-dark-10));
+          background-color: rgb(var(--harsh-ui-surface-bg-100));
+        }
+      }
+    }
+
+    &--open {
+      width: 199px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & .harsh-ui-sidebar__theme--container {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        cursor: pointer;
+        margin: 0;
+        padding: 0 4px;
+        border-radius: 20px;
+        > div {
+          padding: 8px 20px;
+          margin: 4px 0;
+        }
+      }
+    }
+  }
+}
+
+.harsh-ui-sidebar__submenu {
+  width: 100%;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  list-style: none;
+  li {
+    &:hover {
+      background-color: rgb(var(--harsh-ui-dark-90));
+    }
+
+    &.harsh-ui-sidebar__submenu--active {
+      background-color: rgb(var(--harsh-ui-dark-90));
+    }
+
+    a {
+      text-decoration: none;
+      padding: 8px 8px 8px 35px;
+      display: block;
+      color: rgb(var(--harsh-ui-dark-10));
+    }
+  }
+}
