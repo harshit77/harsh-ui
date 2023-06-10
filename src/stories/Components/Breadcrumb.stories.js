@@ -21,7 +21,7 @@ export const Default = (args) => {
   return (
     <Breadcrumb>
       <Breadcrumb.Item to="/">Dashboard</Breadcrumb.Item>
-      <Breadcrumb.Item>VW-RCH01</Breadcrumb.Item>
+      <Breadcrumb.Item>Richard</Breadcrumb.Item>
     </Breadcrumb>
   );
 };
@@ -33,13 +33,13 @@ export const BreadcrumbWithCustomItem = () => {
     <Breadcrumb>
       <Breadcrumb.Item to="/">Dashboard</Breadcrumb.Item>
       <Breadcrumb.Item to="VW-RCH01">
-        VW-RCH01
+        Richard
         <span style={{ color: "#A8A8A8", paddingLeft: 2 }}>
-          (IBM Data center)
+          (Bear)
         </span>
       </Breadcrumb.Item>
       <Breadcrumb.Item>
-        VW-RCH01<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(POD)</span>
+        Richard<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Lewis)</span>
       </Breadcrumb.Item>
     </Breadcrumb>
   );
@@ -50,13 +50,13 @@ export const BreadcrumbWithCustomSeparator = () => {
     <Breadcrumb separator="/">
       <Breadcrumb.Item to="/">Dashboard</Breadcrumb.Item>
       <Breadcrumb.Item to="VW-RCH01">
-        VW-RCH01
+      Richard
         <span style={{ color: "#A8A8A8", paddingLeft: 2 }}>
-          (IBM Data center)
+          (Bear)
         </span>
       </Breadcrumb.Item>
       <Breadcrumb.Item>
-        VW-RCH01<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(POD)</span>
+      Richard<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Lewis)</span>
       </Breadcrumb.Item>
     </Breadcrumb>
   );
@@ -69,13 +69,13 @@ export const BreadcrumbWithIcon = () => {
         <Menu />
       </Breadcrumb.Item>
       <Breadcrumb.Item to="VW-RCH01">
-        VW-RCH01
+      Richard
         <span style={{ color: "#A8A8A8", paddingLeft: 2 }}>
-          (IBM Data center)
+          (Bear)
         </span>
       </Breadcrumb.Item>
       <Breadcrumb.Item>
-        VW-RCH01<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(POD)</span>
+        Richard<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Lewis)</span>
       </Breadcrumb.Item>
     </Breadcrumb>
   );

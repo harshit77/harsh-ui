@@ -19,7 +19,7 @@ const Template = (args) => <Table {...args} />;
 const COLUMN_DATA = [
   {
     dataIndex: "ip_id",
-    title: "IP ID",
+    title: "ID",
     width: "80px",
     sorting: true,
     render: (row, selectedKey, handleActions, handleNestedClick) => {
@@ -45,13 +45,13 @@ const COLUMN_DATA = [
   },
   {
     dataIndex: "ci_dr",
-    title: "CIDR",
+    title: "IDR",
     sorting: true,
     width: "80px",
   },
   {
     dataIndex: "public_vlan",
-    title: "Public VLAN",
+    title: "IPV6",
     width: "180px",
   },
   {
@@ -62,7 +62,7 @@ const COLUMN_DATA = [
   },
   {
     dataIndex: "subnet_mask",
-    title: "Subnet Mask",
+    title: "Mask",
     width: "180px",
   },
 ];
@@ -73,7 +73,7 @@ const ROW_DATA = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: 25,
-    public_vlan: "VLAN187",
+    public_vlan: "STABLE_123",
     gateway: "148.66.207.161",
     subnet_mask: "255.255.255.224",
   },
@@ -82,7 +82,7 @@ const ROW_DATA = [
     ip_id: "216.250.135.32/27",
     ip_net: "216.250.135.32",
     ci_dr: 27,
-    public_vlan: "VLAN187",
+    public_vlan: "STABLE_122",
     gateway: "216.250.135.33",
     subnet_mask: "255.255.255.224",
   },
@@ -91,7 +91,7 @@ const ROW_DATA = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "11",
-    public_vlan: "VLAN181",
+    public_vlan: "STABLE_111",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -100,7 +100,7 @@ const ROW_DATA = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "18",
-    public_vlan: "VLAN189",
+    public_vlan: "STABLE_112",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -109,7 +109,7 @@ const ROW_DATA = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "21",
-    public_vlan: "VLAN177",
+    public_vlan: "STABLE_113",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -118,7 +118,7 @@ const ROW_DATA = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "12",
-    public_vlan: "VLAN17",
+    public_vlan: "STABLE_134",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -130,7 +130,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "21",
-    public_vlan: "VLAN17",
+    public_vlan: "STABLE_134",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -139,7 +139,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.158",
     ci_dr: "22",
-    public_vlan: "VLAN10",
+    public_vlan: "STABLE_144",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -148,7 +148,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.126",
     ci_dr: "23",
-    public_vlan: "VLAN11",
+    public_vlan: "STABLE_194",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -157,7 +157,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "26",
-    public_vlan: "VLAN17",
+    public_vlan: "STABLE_100",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -166,7 +166,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "21",
-    public_vlan: "VLAN17",
+    public_vlan: "STABLE_198",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -175,7 +175,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "28",
-    public_vlan: "VLAN17",
+    public_vlan: "STABLE_786",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -184,7 +184,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.179",
     ci_dr: "24",
-    public_vlan: "VLAN17",
+    public_vlan: "STABLE_112",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -193,7 +193,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.150/27",
     ip_net: "148.66.207.120",
     ci_dr: "31",
-    public_vlan: "VLAN17",
+    public_vlan: "STABLE_134",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -202,7 +202,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "29",
-    public_vlan: "VLAN17",
+    public_vlan: "STABLE_134",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -211,7 +211,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/27",
     ip_net: "148.66.207.160",
     ci_dr: "25",
-    public_vlan: "VLAN10",
+    public_vlan: "STABLE_144",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -220,7 +220,7 @@ const EXTRA_ITEM_PAGINATION = [
     ip_id: "148.66.207.160/17",
     ip_net: "148.66.207.130",
     ci_dr: "32",
-    public_vlan: "VLAN11",
+    public_vlan: "STABLE_109",
     gateway: "216.87.88.129",
     subnet_mask: "255.255.255.192",
   },
@@ -270,7 +270,7 @@ const ROW_DATA_WITH_CHECKBOX = ROW_DATA.map((row) => ({
   ...row,
 }));
 
-const listItems = ["Edit", "Dizzion", "Delete"];
+const listItems = ["Edit", "Append", "Delete"];
 
 const COLUMN_DATA_WITH_DROPDOWN = [
   ...COLUMN_DATA,
@@ -605,7 +605,7 @@ export const NestedTable = (args) => {
         onClick={handleRowClick.bind(this, row)}
       >
         <div>
-          <Tag variant="primary">Dizzion Nested {row.id}</Tag>
+          <Tag variant="primary">Append Nested {row.id}</Tag>
         </div>
       </td>
     );
@@ -629,7 +629,7 @@ export const CustomElement = (args) => {
       rowData={ROW_DATA_WITH_DROPDOWN}
       id="Defaults"
       pagination={{
-        customElement: () => <div>Dizzion</div>,
+        customElement: () => <div>Append</div>,
       }}
       resizer={false}
     />

@@ -115,8 +115,5 @@
     "react-router-dom": "^5.0.1",
     "react-toastify": "^9.1.1",
     "dompurify": "^3.0.2"
-  },
-  "publishConfig": {
-    "registry": "http://nexusaalb-283387229.us-west-2.elb.amazonaws.com/repository/dizzion-npm/"
   }
 }

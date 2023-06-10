@@ -4,12 +4,8 @@ import {
   GridView,
   PeopleAlt,
   BuildFilledOff,
-  DescriptionFilledNo,
   PaidFilledOff,
-  DnsFilledOff,
-  BarChart,
   AdminPanelSettingsFilledOff,
-  C3Logo,
 } from "../../lib/icons";
 
 const SIDEBAR_CONTENT = [
@@ -22,162 +18,66 @@ const SIDEBAR_CONTENT = [
     collapse: "dashboard",
     children: [
       {
-        path: "datacenter-list",
-        title: "Service Provider",
+        path: "service",
+        title: "Service",
       },
       {
-        path: "dashboard",
-        title: "Customer",
+        path: "events",
+        title: "Events",
       },
     ],
   },
   {
-    path: "/customer",
-    title: "Support",
+    path: "/education",
+    title: "Education",
     type: "sub",
     hide: true,
     icontype: <PeopleAlt />,
     collapse: "customer",
     children: [
       {
-        path: "tickets",
-        title: "Service Requests",
+        path: "Primary",
+        title: "Primary",
       },
       {
-        path: "scheduled-jobs",
-        title: "Scheduled Maintenance",
-      },
-      {
-        path: "message",
-        title: "Messages",
-      },
-      {
-        path: "order/customer-ui/customer-pcdvc-list",
-        title: "Customer Build",
-        isAbsoluteURL: true,
+        path: "secondary",
+        title: "Secondary",
       },
     ],
   },
   {
-    path: "/appliances",
-    title: "Build",
+    path: "/resources",
+    title: "Resources",
     type: "sub",
     hide: true,
     icontype: <BuildFilledOff />,
     collapse: "appliances",
     children: [
       {
-        path: "provision-request",
-        title: "Provisioning Requests",
+        path: "genetics",
+        title: "Genetics",
       },
       {
-        path: "job",
-        title: "Tasks",
+        path: "events",
+        title: "Events",
       },
     ],
   },
   {
-    path: "/quote-management",
-    title: "Order",
-    type: "sub",
-    hide: true,
-    icontype: <DescriptionFilledNo />,
-    collapse: "quote-management",
-    children: [
-      {
-        path: "quote",
-        title: "Quotes",
-      },
-      {
-        path: "quoteStepper",
-        title: "Quotes Wizard",
-      },
-      {
-        path: "products",
-        title: "Products",
-      },
-    ],
-  },
-  {
-    path: "/finance",
-    title: "Finance",
-    type: "sub",
-    hide: true,
-    icontype: <PaidFilledOff />,
-    collapse: "finance",
-    children: [
-      {
-        path: "customercontract",
-        title: "Contracts",
-      },
-      {
-        path: "usage",
-        title: "Usage",
-      },
-      {
-        path: "legacycontract",
-        title: "Legacy Contract",
-      },
-      {
-        path: "bulkupload",
-        title: "Bulk Upload",
-      },
-    ],
-  },
-  {
-    path: "/infrastructure",
-    title: "Infrastructure",
-    type: "sub",
-    hide: true,
-    icontype: <DnsFilledOff />,
-    collapse: "infrastructure",
-    children: [
-      {
-        path: "appliances",
-        title: "Appliances",
-      },
-      {
-        path: "manage-datacenter",
-        title: "Data Centers",
-      },
-      {
-        path: "pod-management-tiles",
-        title: "POD Management",
-      },
-    ],
-  },
-  {
-    path: "/reports",
-    title: "Reports",
-    type: "link",
-    hide: true,
-    icontype: <BarChart />,
-    children: [
-      {
-        path: "vspp-reports",
-        title: "VSPP Reports",
-      },
-      {
-        path: "connection-server",
-        title: "Connection Server",
-      },
-    ],
-  },
-  {
-    path: "/administration",
-    title: "Adminstration",
+    path: "/settings",
+    title: "Settings",
     type: "sub",
     hide: true,
     icontype: <AdminPanelSettingsFilledOff />,
     collapse: "administration",
     children: [
       {
-        path: "system-control-panel-tiles",
-        title: "System Control Panel",
+        path: "general",
+        title: "General",
       },
       {
-        path: "administration-tiles",
-        title: "Tenant Control Panel",
+        path: "advance",
+        title: "Advance",
       },
     ],
   },
@@ -201,7 +101,7 @@ export const Default = () => {
   return (
     <Sidebar
       sidebarMenu={SIDEBAR_CONTENT}
-      logo={C3Logo}
+      logo={PaidFilledOff}
       onSelection={onSelection}
     />
   );
@@ -212,7 +112,7 @@ export const SidebarCurrentNav = () => {
   return (
     <Sidebar
       sidebarMenu={SIDEBAR_CONTENT}
-      logo={C3Logo}
+      logo={PaidFilledOff}
       currentNavIndex={{ menuIndex: 1, subMenuIndex: 1 }}
       onSelection={onSelection}
     />
