@@ -1,19 +1,19 @@
 import React from "react";
-import NotRecordFound from "../../lib/components/NoRecordFound";
+import NoRecordFound from "../../lib/components/NoRecordFound";
 
 export default {
   title: "Components/NoRecordFound",
-  component: NotRecordFound,
+  component: NoRecordFound,
   parameters: {
     docs: {
       description: {
-        component: '`import { NoRecordFound } from "dizzion/index"`',
+        component: '`import { NoRecordFound } from "HarshUI/index"`',
       },
     },
   },
 };
 
-const Template = (args) => <NotRecordFound {...args} />;
+const Template = (args) => <NoRecordFound {...args} />;
 
 export const Default = Template.bind({});
 

@@ -36,7 +36,7 @@ const Template = (args) => <Tag {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  children: "Dizzion",
+  children: "HarshUI",
   variant: "primary",
   onClose: undefined,
 };
@@ -75,7 +75,7 @@ export const Variants = () => {
   return (
     <div style={{ display: "flex", flexDirection: "row", gap: 10 }}>
       <div>
-        <Tag variant="primary">Dizzion</Tag>
+        <Tag variant="primary">HarshUI</Tag>
       </div>
       <div>
         <Tag variant="success">IBM</Tag>

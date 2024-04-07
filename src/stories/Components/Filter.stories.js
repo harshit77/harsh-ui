@@ -170,8 +170,8 @@ export const TableWithFilter = () => {
   const [filteredKeys, setFilteredKeys] = useState(
     COLUMN_DATA.reduce(
       (acc, column) => ({ ...acc, [column.dataIndex]: "" }),
-      {}
-    )
+      {},
+    ),
   );
   const [tableRowData, setTableRowData] = useState(ROW_DATA);
 
@@ -194,7 +194,7 @@ export const TableWithFilter = () => {
     const isFilteredEmpty = Object.values(filteredKeys).concat() === "";
 
     setTableRowData(
-      filteredData.length === 0 && isFilteredEmpty ? ROW_DATA : filteredData
+      filteredData.length === 0 && isFilteredEmpty ? ROW_DATA : filteredData,
     );
   }, [filteredKeys]);
 
@@ -418,10 +418,10 @@ export const TableWithAdvanceOption = () => {
       setFilteredOptions({
         ...filteredDataWithAdvanceFilter,
         filterBody: filteredDataWithAdvanceFilter.filterBody.filter(
-          (item) => !item.hide
+          (item) => !item.hide,
         ),
       }),
-    [filteredDataWithAdvanceFilter]
+    [filteredDataWithAdvanceFilter],
   );
 
   const handleDropdown = (e, instance) => {
@@ -437,7 +437,7 @@ export const TableWithAdvanceOption = () => {
             filteredList.current = [...filteredList.current, id];
           } else {
             filteredList.current = filteredList.current.filter(
-              (item) => id !== item
+              (item) => id !== item,
             );
           }
 
@@ -446,7 +446,7 @@ export const TableWithAdvanceOption = () => {
         acc.push(current);
         return acc;
       },
-      []
+      [],
     );
     setFilteredOptions({
       ...filteredOptions,

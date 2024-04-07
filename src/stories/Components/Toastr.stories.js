@@ -37,7 +37,7 @@ export const Default = () => {
         onClick={() =>
           Toastr.success(
             "Successfully Saved",
-            "You have successfully save your filter. "
+            "You have successfully save your filter. ",
           )
         }
       />
@@ -47,7 +47,7 @@ export const Default = () => {
         onClick={() =>
           Toastr.error(
             "Error Reported",
-            Error("Some error occured at the Server Side")
+            Error("Some error occured at the Server Side"),
           )
         }
       />
@@ -67,7 +67,7 @@ export const AxiosError = () => {
       const axiosError = {
         isAxiosError: true,
         config: {
-          url: "https://c3.dizzion.com",
+          url: "https://c3.HarshUI.com",
         },
         response: {
           data: {
@@ -88,7 +88,7 @@ export const AxiosError = () => {
       const axiosError = {
         isAxiosError: true,
         config: {
-          url: "https://c3.dizzion.com",
+          url: "https://c3.HarshUI.com",
         },
         response: {
           data: {

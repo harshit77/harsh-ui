@@ -1,21 +1,24 @@
-const path = require("path");
+
 
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-docs",
     "@storybook/preset-create-react-app",
   ],
-  framework: "@storybook/react",
-  core: {
-    builder: "@storybook/builder-webpack5",
+  staticDirs:["../src/stories/assets/"],
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
   },
-  babel: async (options) => {
-    return {
-      ...options,
-      presets: [...options.presets, "@babel/preset-react"],
-    };
+
+  docs: {
+    autodocs: "tag",
+    defaultName: "Documentation",
   },
 };
+

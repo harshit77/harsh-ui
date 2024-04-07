@@ -34,9 +34,7 @@ export const BreadcrumbWithCustomItem = () => {
       <Breadcrumb.Item to="/">Dashboard</Breadcrumb.Item>
       <Breadcrumb.Item to="VW-RCH01">
         Richard
-        <span style={{ color: "#A8A8A8", paddingLeft: 2 }}>
-          (Bear)
-        </span>
+        <span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Bear)</span>
       </Breadcrumb.Item>
       <Breadcrumb.Item>
         Richard<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Lewis)</span>
@@ -50,13 +48,11 @@ export const BreadcrumbWithCustomSeparator = () => {
     <Breadcrumb separator="/">
       <Breadcrumb.Item to="/">Dashboard</Breadcrumb.Item>
       <Breadcrumb.Item to="VW-RCH01">
-      Richard
-        <span style={{ color: "#A8A8A8", paddingLeft: 2 }}>
-          (Bear)
-        </span>
+        Richard
+        <span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Bear)</span>
       </Breadcrumb.Item>
       <Breadcrumb.Item>
-      Richard<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Lewis)</span>
+        Richard<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Lewis)</span>
       </Breadcrumb.Item>
     </Breadcrumb>
   );
@@ -69,10 +65,8 @@ export const BreadcrumbWithIcon = () => {
         <Menu />
       </Breadcrumb.Item>
       <Breadcrumb.Item to="VW-RCH01">
-      Richard
-        <span style={{ color: "#A8A8A8", paddingLeft: 2 }}>
-          (Bear)
-        </span>
+        Richard
+        <span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Bear)</span>
       </Breadcrumb.Item>
       <Breadcrumb.Item>
         Richard<span style={{ color: "#A8A8A8", paddingLeft: 2 }}>(Lewis)</span>

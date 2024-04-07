@@ -58,7 +58,7 @@ export const Sizes = (args) => {
 };
 
 export const DisabledDate = (args) => {
-  return <DateCalender label="Disabled Date" variant="primary" disabled />
+  return <DateCalender label="Disabled Date" variant="primary" disabled />;
 };
 
 export const DateTime = (args) => {

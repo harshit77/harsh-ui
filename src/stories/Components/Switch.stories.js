@@ -7,7 +7,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: '`import { Switch } from "dizzion/index"`',
+        component: '`import { Switch } from "HarshUI/index"`',
       },
     },
   },

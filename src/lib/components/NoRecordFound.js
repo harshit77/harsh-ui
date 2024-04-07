@@ -4,7 +4,7 @@ import Typography from "./Typography";
 import { Simple } from "../icons";
 import classnames from "classnames";
 
-const NotRecordFound = ({
+const NoRecordFound = ({
   className,
   primary = "No record found!",
   secondary,
@@ -26,9 +26,9 @@ const NotRecordFound = ({
   );
 };
 
-NotRecordFound.propTypes = {
+NoRecordFound.propTypes = {
   primary: PropTypes.string,
   secondary: PropTypes.string,
 };
 
-export default NotRecordFound;
+export default NoRecordFound;

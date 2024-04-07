@@ -1,22 +1,10 @@
 import React, { useEffect } from "react";
-import { addDecorator } from "@storybook/react";
 import "../src/lib/styles/index.scss";
 import { MemoryRouter } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.min.css";
 
-addDecorator((story) => <MemoryRouter>{story()}</MemoryRouter>);
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-};
-
-export const globalTypes = {
+const globalTypes = {
   theme: {
     name: "Theme",
     description: "Global theme for components",
@@ -45,7 +33,7 @@ const applyStyle = (element, className) => {
   element.classList.add(className);
 };
 
-const themeScheme = (Story, context) => {
+const themeScheme = (story, context) => {
   useEffect(() => {
     const body = window.document.body;
     clearStyles(body);
@@ -55,7 +43,21 @@ const themeScheme = (Story, context) => {
     };
   }, [context.globals.theme]);
 
-  return <Story />;
+  return <MemoryRouter>{story()}</MemoryRouter>;
+};
+
+export default {
+  parameters: {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+},
+  globalTypes,
+  decorators: [themeScheme],
 };
 
 export const decorators = [themeScheme];
