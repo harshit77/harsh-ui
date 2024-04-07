@@ -33,7 +33,7 @@ const DETAILS = {
       },
       {
         name: "Data center type",
-        value: "Dizzion",
+        value: "HarshUI",
       },
       {
         name: "Portal url",

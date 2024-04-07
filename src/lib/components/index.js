@@ -8,7 +8,6 @@ import Counter from "./Counter";
 import Card from "./Card";
 import CustomIcon from "./CustomIcon";
 import Checkbox from "./Checkbox";
-import DizzionEditor from "./DizzionEditor";
 import Detail from "./Detail";
 import Dropdown from "./Dropdown";
 import Filter from "./Filter";
@@ -48,7 +47,6 @@ export {
   Card,
   Checkbox,
   CustomIcon,
-  DizzionEditor,
   Detail,
   Dropdown,
   Filter,

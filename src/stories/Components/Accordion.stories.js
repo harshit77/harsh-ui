@@ -61,8 +61,8 @@ const CUSTOM_DATA_INPUT = [
         }}
       >
         <Dropdown
-          defaultValue="Dizzion"
-          label="Data Center Type *"
+          defaultValue="Harsh UI"
+          label="Type *"
           buttonProps={{ variant: "dropdown" }}
           onCloseSelect={(e) => console.log(e.target.id)}
         >
@@ -72,19 +72,19 @@ const CUSTOM_DATA_INPUT = [
           </Dropdown.Menu>
         </Dropdown>
         <Input
-          label="Data Center Name"
-          placeholder="Data center name"
-          value="VW-DEN03"
+          label="Name"
+          placeholder="name"
+          value="DEN03"
         />
         <Input
-          label="Customer ID"
-          placeholder="Customer ID"
+          label="ID"
+          placeholder="ID"
           value="United States"
         />
         <Input
-          label="Portal URL*"
-          placeholder="Portal URL"
-          value="https://supportcenter.viawest.com..."
+          label="URL*"
+          placeholder="URL"
+          value="https://supportcenter.google.com..."
         />
       </div>
     ),
@@ -121,7 +121,7 @@ const CUSTOM_DATA_CARDS = [
         >
           <Avatar size="medium" user={{ name: "VW" }} />
           <Typography component="h4" weight="medium">
-            10159-ACME Corp
+            ACME
           </Typography>
         </div>
         <div
@@ -197,7 +197,7 @@ const CUSTOM_DATA_CARDS = [
         }}
       >
         <Dropdown
-          defaultValue="Dizzion"
+          defaultValue="HarshUI"
           label="Data Center Type *"
           buttonProps={{ variant: "dropdown" }}
           onCloseSelect={(e) => console.log(e.target.id)}
@@ -208,19 +208,19 @@ const CUSTOM_DATA_CARDS = [
           </Dropdown.Menu>
         </Dropdown>
         <Input
-          label="Data Center Name"
-          placeholder="Data center name"
-          value="VW-DEN03"
+          label="Name"
+          placeholder="name"
+          value="DEN03"
         />
         <Input
-          label="Customer ID"
-          placeholder="Customer ID"
+          label="ID"
+          placeholder="ID"
           value="United States"
         />
         <Input
-          label="Portal URL*"
-          placeholder="Portal URL"
-          value="https://supportcenter.viawest.com..."
+          label="URL*"
+          placeholder="URL"
+          value="https://supportcenter.goggle.com..."
         />
       </div>
     ),

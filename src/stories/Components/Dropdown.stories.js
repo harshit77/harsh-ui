@@ -47,11 +47,11 @@ export const Default = (args) => {
 Default.argTypes = Dropdown.prop;
 
 export const DefaultWithLabel = (args) => {
-  const listItems = ["Edit", "Dizzion", "Delete"];
+  const listItems = ["Edit", "HarshUI", "Delete"];
   return (
     <div style={{ width: 200 }}>
       <Dropdown
-        defaultValue="Dizzion"
+        defaultValue="HarshUI"
         label="Data Center Type *"
         buttonProps={{ variant: "dropdown" }}
       >
@@ -69,11 +69,11 @@ export const DefaultWithLabel = (args) => {
 };
 
 export const DefaultWithSecondary = (args) => {
-  const listItems = ["Edit", "Dizzion", "Delete"];
+  const listItems = ["Edit", "HarshUI", "Delete"];
   return (
     <div style={{ width: 200 }}>
       <Dropdown
-        defaultValue="Dizzion"
+        defaultValue="HarshUI"
         variant="secondary"
         label="Data Center Type *"
         buttonProps={{ variant: "dropdown" }}
@@ -94,7 +94,7 @@ export const DefaultWithSecondary = (args) => {
 };
 
 export const Error = (args) => {
-  const listItems = ["Edit", "Dizzion", "Delete"];
+  const listItems = ["Edit", "HarshUI", "Delete"];
   const [error, setError] = useState("Please select the option");
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -150,11 +150,11 @@ export const Disabled = (args) => {
 };
 
 export const DefaultWithHorizontalLabel = (args) => {
-  const listItems = ["Edit", "Dizzion", "Delete"];
+  const listItems = ["Edit", "HarshUI", "Delete"];
   return (
     <div style={{ width: 400 }}>
       <Dropdown
-        defaultValue="Dizzion"
+        defaultValue="HarshUI"
         label="Data Center Type *"
         buttonProps={{ variant: "dropdown" }}
         horizontal
@@ -176,7 +176,7 @@ export const DropdownWithTextVariant = (args) => {
   const listItems = ["Edit", "Update", "Delete"];
   return (
     <div style={{ width: 200 }}>
-      <Dropdown defaultValue="Dizzion" buttonProps={{ variant: "text" }}>
+      <Dropdown defaultValue="HarshUI" buttonProps={{ variant: "text" }}>
         <Dropdown.Menu>
           {listItems.map((item, index) => (
             <React.Fragment key={item}>
@@ -209,12 +209,12 @@ export const ActionDropdown = (args) => {
 };
 
 export const DropdownWithCustomItemWidth = (args) => {
-  const listItems = ["Edit", "Dizzion", "Delete"];
+  const listItems = ["Edit", "HarshUI", "Delete"];
   return (
     <div style={{ width: 200 }}>
       <Dropdown
         fullWidth={false}
-        defaultValue="Dizzion"
+        defaultValue="HarshUI"
         buttonProps={{ variant: "dropdown" }}
       >
         <Dropdown.Menu>
@@ -274,7 +274,7 @@ export const DropdownWithSearch = (args) => {
     e.target.value
       ? setListItems((prevItems) => [
           ...initialListItems.current.filter((item) =>
-            item?.value.toLowerCase().includes(e.target.value.toLowerCase())
+            item?.value.toLowerCase().includes(e.target.value.toLowerCase()),
           ),
         ])
       : setListItems([...initialListItems.current]);
@@ -377,7 +377,7 @@ export const AutoComplete = (args) => {
     value = value.trim();
 
     const filtered = searchAbleData.filter((item) =>
-      item.toLowerCase().includes(value.toLowerCase())
+      item.toLowerCase().includes(value.toLowerCase()),
     );
     setListItem(filtered.length && value !== "" ? [...filtered] : []);
     setValue(value);

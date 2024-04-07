@@ -33,7 +33,9 @@ export const Default = () => {
         onChange={(updatedStep) => setActiveStep(updatedStep)}
       >
         {steps.map((label) => (
-          <Stepper.Step key={label} allowClick={true}>{label}</Stepper.Step>
+          <Stepper.Step key={label} allowClick={true}>
+            {label}
+          </Stepper.Step>
         ))}
       </Stepper>
       <div
@@ -86,7 +88,9 @@ export const ModalWithStepper = () => {
               onChange={(updatedStep) => setActiveStep(updatedStep)}
             >
               {steps.map((label) => (
-                <Stepper.Step key={label} allowClick={true}>{label}</Stepper.Step>
+                <Stepper.Step key={label} allowClick={true}>
+                  {label}
+                </Stepper.Step>
               ))}
             </Stepper>
           </div>
@@ -212,7 +216,12 @@ export const TagBasedStepper = () => {
         variant="tagBased"
       >
         {stepsWithIcon.map((item) => (
-          <Stepper.Step key={item.title} variant="tagBased" icon={item.icon} allowClick={true}>
+          <Stepper.Step
+            key={item.title}
+            variant="tagBased"
+            icon={item.icon}
+            allowClick={true}
+          >
             {item.title}
           </Stepper.Step>
         ))}
@@ -249,7 +258,11 @@ export const SequentialStepper = () => {
 
   return (
     <>
-      <Accordion className="harsh-ui-accordion__item--wrapper--sequential" expanded={expanded} onChange={() => setExpanded(true)}>
+      <Accordion
+        className="harsh-ui-accordion__item--wrapper--sequential"
+        expanded={expanded}
+        onChange={() => setExpanded(true)}
+      >
         <Accordion.AccordionTitle>
           <h3>Configure</h3>
           <p className="harsh-ui-stepper--subtitle">

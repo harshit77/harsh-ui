@@ -37,7 +37,7 @@ const onAxiosRequest = (file, onUploadProgress) => {
       const axiosSuccess = {
         isAxiosError: false,
         config: {
-          url: "https://c3.dizzion.com",
+          url: "https://c3.HarshUI.com",
         },
         response: {
           data: {

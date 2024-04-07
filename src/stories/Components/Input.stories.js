@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "../../lib/components/Input";
 import Dropdown from "../../lib/components/Dropdown";
+import { within, expect, userEvent, fn } from "@storybook/test";
 
 export default {
   title: "Components/Input",
@@ -23,7 +24,11 @@ Default.args = {
   autoFocus: true,
 };
 
-Default.argTypes = Input.props;
+Default.play= async({canvasElement})=>{
+  const canvas= within(canvasElement);
+  const placeholderElement= canvas.getByPlaceholderText("Input Placeholder");
+  expect(placeholderElement).toBeInTheDocument();
+}
 
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -48,38 +53,47 @@ export const Sizes = () => {
   );
 };
 
-export const Controlled = (args) => {
-  const [value, setValue] = useState("Dizzion");
-  return (
-    <Input label="ControlledInput" onChange={(e) => setValue(e.target.value)} />
-  );
+export const Controlled = Template.bind({});
+Controlled.args = {
+  label: "InputLabel",
+  placeholder: "Input Placeholder",
+  onChange:fn(),
+};
+
+Controlled.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  const placeholderElement = canvas.getByPlaceholderText("Input Placeholder");
+  await userEvent.type(placeholderElement, "HarshUI", {
+    delay: 500,
+  });
+  expect(placeholderElement).toHaveDisplayValue("HarshUI")
 };
 
 export const ControlledSufix = (args) => {
-  const [value, setValue] = useState("Dizzion");
+  const [value, setValue] = useState("HarshUI");
   return (
     <Input
       label="ControlledInput"
-      suffix={<div>.dizzion.com</div>}
-      onChange={(e) => setValue(e.target.value + ".dizzion.com")}
+      suffix={<div>.HarshUI.com</div>}
+      onChange={(e) => setValue(e.target.value + ".HarshUI.com")}
     />
   );
 };
 
 export const PublicUrl = (args) => {
-  const [value, setValue] = useState("Dizzion");
+  const [value, setValue] = useState("HarshUI");
   return (
     <Input
       label="ControlledInput"
-      suffix={<div>.dizzion.com</div>}
-      onChange={(e) => setValue(e.target.value + ".dizzion.com")}
+      suffix={<div>.HarshUI.com</div>}
+      onChange={(e) => setValue(e.target.value + ".HarshUI.com")}
       placeholder="CIDR"
     />
   );
 };
 
 export const InputWithDropdownOnly = (args) => {
-  const [value, setValue] = useState("Dizzion");
+  const [value, setValue] = useState("HarshUI");
   const { Menu, MenuItem, Divider } = Dropdown;
   return (
     <Input
@@ -120,8 +134,8 @@ export const InputWithCountryCode = (args) => {
       const updateValue = !getPhoneNumberOnly
         ? `${countryCodeWithFormat}${inputValue}`
         : inputValue === `+${currentCountryCode}`
-        ? ""
-        : inputValue;
+          ? ""
+          : inputValue;
       setValue(updateValue);
     }
   };
@@ -154,7 +168,7 @@ export const SaleAmount = (args) => {
 };
 
 export const ControlledWithSuffix = (args) => {
-  const [value, setValue] = useState("Dizzion");
+  const [value, setValue] = useState("HarshUI");
   return (
     <Input
       label="ControlledInput"
@@ -167,7 +181,7 @@ export const ControlledWithSuffix = (args) => {
 };
 
 export const SearchInput = (args) => {
-  const [value, setValue] = useState("Dizzion");
+  const [value, setValue] = useState("HarshUI");
   return (
     <Input
       value={value}
@@ -179,12 +193,12 @@ export const SearchInput = (args) => {
 };
 
 export const HelpText = (args) => {
-  const [value, setValue] = useState("Dizzion");
+  const [value, setValue] = useState("HarshUI");
   return (
     <Input
       label="Email"
       value={value}
-      onChange={(e) => setValue(e.target.value + ".dizzion.com")}
+      onChange={(e) => setValue(e.target.value + ".HarshUI.com")}
       placeholder="example@gmail.com"
       helpText="Please make sure you provide gmail id only"
     />
@@ -192,7 +206,7 @@ export const HelpText = (args) => {
 };
 
 export const ControlledWithError = (args) => {
-  const [value, setValue] = useState("Dizzion");
+  const [value, setValue] = useState("HarshUI");
   return (
     <Input
       label="Gateway*"
@@ -205,7 +219,7 @@ export const ControlledWithError = (args) => {
 };
 
 export const PhoneNumberWithError = (args) => {
-  const [value, setValue] = useState("Dizzion");
+  const [value, setValue] = useState("HarshUI");
   const { Menu, MenuItem, Divider } = Dropdown;
   return (
     <Input
