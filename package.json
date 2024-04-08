@@ -20,6 +20,7 @@
   "scripts": {
     "prebuild-lib": "rimraf src/lib/icons && rimraf dist",
     "storybook": "storybook dev -p 6006 ./src",
+    "test-storybook": "test-storybook",
     "build-storybook": "storybook build",
     "build": "npm pack --pack-destination='./build'",
     "build-lib": "npm run svgr && rollup -c --bundleConfigAsCjs",
@@ -75,6 +76,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^8.0.6",
     "@storybook/react-webpack5": "^8.0.6",
+    "@storybook/test-runner": "^0.17.0",
     "@storybook/theming": "^8.0.6",
     "@svgr/cli": "^6.5.1",
     "@svgr/rollup": "^6.5.1",
