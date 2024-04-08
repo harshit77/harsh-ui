@@ -2,6 +2,7 @@ name: Test component
 on: push
 jobs:
   test:
+    timeout-minutes: 7
     runs-on: ubuntu-latest
     steps:
       - name: Get the harsh-ui reposistory
@@ -14,6 +15,6 @@ jobs:
         run: npm run build-storybook --quite
       - name: Serve Storybook and run tests
         run: |
-          npx concurrently -k -s "first" -n "SB,Test" -c "magenta,blue" \
+          npx concurrently -k -s first -n "SB,Test" -c "magenta,blue" \
           "npx http-server storybook-static --port 6006 --slient" \
           "npx wait-on tcp:6006 && npm run test-storybook"

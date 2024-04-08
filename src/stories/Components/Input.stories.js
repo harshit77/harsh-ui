@@ -6,6 +6,7 @@ import { within, expect, userEvent, fn } from "@storybook/test";
 export default {
   title: "Components/Input",
   component: Input,
+  tags:["test-only"],
   parameters: {
     docs: {
       description: {
