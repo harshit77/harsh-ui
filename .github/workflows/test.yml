@@ -1,8 +1,8 @@
-name: Test component
-on: push
+name: Deploy harsh-ui package
+on: [push, workflow_dispatch]
+
 jobs:
   test:
-    timeout-minutes: 7
     runs-on: ubuntu-latest
     steps:
       - name: Get the harsh-ui reposistory
@@ -18,3 +18,35 @@ jobs:
           npx concurrently -k -s first -n "SB,Test" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --slient" \
             "npx wait-on tcp:127.0.0.1:6006 && npm run test-storybook"
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the harsh-ui reposistory
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm i
+      - name: Build harsh-ui
+        run: npm run build-lib
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: |
+            hooks.js
+            icons.js
+            index.js
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the build-artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-files
+      - name: Output the contents
+        run: ls
+      - name: Deploy
+        run: echo "Deploying..."
