@@ -27,5 +27,3 @@ yarn-error.log*
 node_modules
 
 harsh-ui*
-
-package-lock.json
