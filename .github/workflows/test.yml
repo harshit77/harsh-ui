@@ -7,6 +7,11 @@ jobs:
     steps:
       - name: Get the harsh-ui reposistory
         uses: actions/checkout@v3
+      - name: check
+        if: github.event_name="dsdsd"
+        run: echo "This will not execute"
+      - name: check1
+        run: echo "will this execute"
       - name: Cache dependencies
         id: cache
         uses: actions/cache@v3
