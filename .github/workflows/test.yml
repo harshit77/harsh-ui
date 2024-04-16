@@ -8,7 +8,7 @@ jobs:
       - name: Get the harsh-ui reposistory
         uses: actions/checkout@v3
       - name: check
-        if: github.event_name == "dsdsd"
+        if: github.event_name == "release"
         run: echo "This will not execute"
       - name: check1
         run: echo "will this execute"
